@@ -1,2 +1,7 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<%= simple_form_for @movie, html: { :multipart => true } do |f| %>
+ <div class="form-inputs">
+  <%= f.label :title %>
+  <%= f.text_field :title %> 
+  <%= f.submit "Update"  %>
+</div>
+<% end %>
