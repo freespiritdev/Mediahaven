@@ -1,0 +1,88 @@
+@import "bootstrap";
+
+.hide {
+  display: none;
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+.user-info {
+  margin-top: 9px;
+}
+
+body {
+  background: #000A00;
+}
+
+a {
+  color: #33CCFF;
+}
+
+a.movielink {
+      color: #FFFFFF;
+}
+p {
+  color: #33CCFF;
+}
+
+em {
+  color: #FFFFFF;
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h2 {
+    color: #FFFFFF;
+}
+
+h3 {
+    color: #33CCFF;;
+}
+
+
+h4 {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h5 {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+th{
+  color: #33CCFF;
+}
+
+label {
+  color: #FFFFFF;
+}
+
+.checkbox {
+  display: block;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  label {
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: middle;
+}
+
+table td, table td * {
+    vertical-align: top;
+}
