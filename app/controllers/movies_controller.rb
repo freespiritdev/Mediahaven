@@ -1,15 +1,16 @@
 class MoviesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @movies = Movie.all 
   end
 
   def new
-    @movie = Movie.new
+    @movie = current_user.movies.build
   end
 
   def create
-    @movie = Movie.new(movie_params)
+    @movie = current_user.movies.build(movie_params)
 
     if @movie.save
       redirect_to movies_path, notice: 'Movie Added!'
