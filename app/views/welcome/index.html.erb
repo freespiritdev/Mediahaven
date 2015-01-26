@@ -21,7 +21,7 @@
       <h3 align="center">Movies</h3>  
         <div class="thumbnail" align = "center" width="10%"> 
         <% @movies.each do |movie| %>
-        <%= link_to movie.title, @movie %>
+        <%= link_to movie.title, movies_path %>
         <% end %>
       </div>
     </div>
