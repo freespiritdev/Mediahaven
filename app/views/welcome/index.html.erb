@@ -1,3 +1,28 @@
-<h1>Welcome to Media Haven</h1>
+<div style="background:transparent !important" class="jumbotron">
+  <div class="container">
+    <h1>
+       <em><span style="color: #33CCFF;">Welcome to Media Haven</span></em>
+    </h1>
+    <h4 align="center">Add TV Shows, Movies, Music & Review Them!</h4>
+    <p align="center">
+    <%- if user_signed_in? %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-info :hover'  %>
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-info :hover' %>
+    <% end %>
+    </p>
+  </div>
+</div>
 
-<p>Add TV Shows, Movies, Music & Review Them!</p>
+<div class="container">
+  <div>
+    <div class="col-sm-2 col-sm-3">
+      <h3 align="center">Movies</h3>  
+        <div class="thumbnail" align = "center" width="10%"> 
+        <% @movies.each do |movie| %>
+        <%= link_to movie.title, @movie %>
+        <% end %>
+      </div>
+    </div>
+  </div>

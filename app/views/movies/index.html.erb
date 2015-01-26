@@ -7,8 +7,8 @@
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail" align = "center">
          
-          <%= link_to @movie, movie.title%> |
-          <%= link_to 'Remove', @movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to movie.title, movie %> |
+          <%= link_to 'Remove', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
     <% end %>

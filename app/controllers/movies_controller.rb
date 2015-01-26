@@ -35,6 +35,17 @@ class MoviesController < ApplicationController
   def show
   end
 
+  def destroy
+    @movie = Movie.find(params[:id])
+    title = @movie.title
+
+    if @movie.destroy
+      redirect_to @movie
+    else
+      render :show
+    end
+  end
+
   private
 
    def movie_params
