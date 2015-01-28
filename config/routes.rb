@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resource :movies
 
 
-  get 'about' => 'welcome#about'
+    get 'about' => 'welcome#about'
 
   root to: 'welcome#index'
 end

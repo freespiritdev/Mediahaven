@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150125064109) do
+ActiveRecord::Schema.define(version: 20150128042811) do
 
   create_table "installs", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -32,13 +32,14 @@ ActiveRecord::Schema.define(version: 20150125064109) do
   add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
 
   create_table "movies", force: true do |t|
-    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.string   "title"
+    t.string   "user_id"
   end
 
   create_table "users", force: true do |t|
+    t.string   "name"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -49,8 +50,14 @@ ActiveRecord::Schema.define(version: 20150125064109) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
