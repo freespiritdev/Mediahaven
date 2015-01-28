@@ -5,12 +5,16 @@ class MoviesController < ApplicationController
     @movies = Movie.all 
   end
 
+  def show
+    @movie = Movie.find(params[:title])
+  end
+
   def new
     @movie = Movie.new
   end
 
   def create
-    @movie = current_user.movies.build(movie_params)
+    @movie = Movie.new(movie_params)
 
     if @movie.save
       redirect_to movies_path, notice: 'Movie Added!'
@@ -46,10 +50,8 @@ class MoviesController < ApplicationController
     end
   end
  
+   private
    def movie_params
      params.require(:movie).permit(:title)
    end
-
-   def show
-  end
 end
