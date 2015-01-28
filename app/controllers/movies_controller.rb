@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
 
   def new
-    @movie = current_user.movies.build
+    @movie = Movie.new
   end
 
   def create
@@ -33,8 +33,7 @@ class MoviesController < ApplicationController
      @movie = Movie.find(params[:id])
   end
 
-  def show
-  end
+  
 
   def destroy
     @movie = Movie.find(params[:id])
@@ -46,10 +45,11 @@ class MoviesController < ApplicationController
       render :show
     end
   end
-
-  private
  
    def movie_params
      params.require(:movie).permit(:title)
    end
+
+   def show
+  end
 end

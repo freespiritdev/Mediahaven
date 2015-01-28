@@ -1,13 +1,6 @@
-<h1>Edit Movie</h1>
+<h1>Edit Your Movie</h1>
 
-<%= simple_form_for @movie, html: { :multipart => true } do |f| %>
- <div class="form-inputs">
-  <%= f.label :title %>
-  <%= f.text_field :title %> 
-  
-  <%= f.submit "Update", class: 'btn btn-info'  %>
-</div>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Show', @movie %> |
-<%= link_to 'Add Movie', movies_path %>
+<%= link_to 'Back', movies_path %>
