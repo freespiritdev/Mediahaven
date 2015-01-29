@@ -1,14 +1,13 @@
 class SeriesController < ApplicationController
   def index
-    @series = Series.all
+    @series = Serie.all
   end
 
   def new
-    @series = current_user.series.build
+    @serie = Serie.new
   end
 
   def edit
-    @series = Series.find(params[:id])
   end
 
   def show

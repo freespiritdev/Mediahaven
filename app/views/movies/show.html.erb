@@ -1,8 +1,10 @@
 
 <h1>Movie Title</h1>
-<h1><%= @movie.title %></h1>
+
 
 <%= link_to 'Add Movie', new_movies_path %>
+<br>
+<br>
 
-<%= link_to 'Edit', movies_path(@movie) %> |
+<%= link_to 'Edit', edit_movies_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

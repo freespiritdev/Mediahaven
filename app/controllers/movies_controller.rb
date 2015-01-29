@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:title])
+
   end
 
   def new
@@ -34,11 +34,9 @@ class MoviesController < ApplicationController
 
 
   def edit
-     @movie = Movie.find(params[:id])
   end
 
   
-
   def destroy
     @movie = Movie.find(params[:id])
     title = @movie.title
