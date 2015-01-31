@@ -8,29 +8,29 @@
 </head>
 <body>
 
-<div class="container-fluid">
-    <ul class="nav nav-tabs">
-    
+  <div class="container-fluid">
+      <ul class="nav nav-tabs">
+      
+      <%= link_to "Home", root_path %>
+      <%= link_to "Movies", movies_path %>
+      <%= link_to "Series", series_path %>
+      <%= link_to "About", about_path %>
+     
+      </ul>
+  <%= yield %>
+
+
+  <footer align="center"> <div>
     <%= link_to "Home", root_path %>
     <%= link_to "Movies", movies_path %>
     <%= link_to "Series", series_path %>
     <%= link_to "About", about_path %>
-   
-    </ul>
-<%= yield %>
-
-<footer align="center"> <div>
-  <%= link_to "Home", root_path %>
-  <%= link_to "Movies", movies_path %>
-  <%= link_to "Series", series_path %>
-  <%= link_to "About", about_path %>
-</div>
-  
-<em>
-  Copyright &copy; 2015 CBS VI 360
-</em>
-
-</footer>
+  </div>
+    
+  <em>
+    Copyright &copy; 2015 CBS VI 360
+  </em>
+  </footer>
 
 </body>
 </html>
