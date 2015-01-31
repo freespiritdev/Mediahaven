@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable#, :confirmable
 
-  has_many :movies
   has_many :shows
+  has_many :movies
+  has_many :tunes
  
 end

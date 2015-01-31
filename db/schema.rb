@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131094602) do
+ActiveRecord::Schema.define(version: 20150131111925) do
 
   create_table "movies", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "title"
-    t.string   "user_id"
-  end
-
-  create_table "series", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "shows", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tunes", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"

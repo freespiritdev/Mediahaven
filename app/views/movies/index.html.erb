@@ -1,13 +1,4 @@
 <h1>Movies</h1>
-<br>
-<br>
 <% @movies.each do |movie| %>
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail" align = "center">
-      <%= link_to movie.title, movie %> |
-      <%= link_to 'Remove', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  </div>
+<p><%= link_to movie.title, movie_path(movie.id) %>
 <% end %>
-   
-

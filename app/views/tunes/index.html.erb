@@ -1,0 +1,4 @@
+<h1>TV Shows</h1>
+<% @tunes.each do |tune| %>
+<p><%= link_to tune.title, tune_path(tune.id) %>
+<% end %>

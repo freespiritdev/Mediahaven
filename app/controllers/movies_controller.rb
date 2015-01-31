@@ -1,11 +1,14 @@
 class MoviesController < ApplicationController
+  before_action :set_movie, only: [:show,:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  
 
   def index
-    @movies = Movie.all 
+    @movies = Movie.all
   end
 
   def show
+  
   end
 
   def new
@@ -14,26 +17,25 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.new(movie_params)
-
+    
     if @movie.save
-      redirect_to movies_path, notice: 'Movie Added!'
+      redirect_to @movie, notice: 'Movie Added!'
     else
       render action: 'new'
     end
   end
 
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
   def update
     @movie = Movie.find(params[:id])
-
     if @movie.update(movie_params)
-      redirect_to movies_path, notice: 'Movie successfully updated.'
+      redirect_to @movie, notice: 'Movie successfully updated.'
     else
       render action: 'edit'
     end
-  end
-
-
-  def edit
   end
   
   def destroy
@@ -41,14 +43,21 @@ class MoviesController < ApplicationController
     title = @movie.title
 
     if @movie.destroy
-      redirect_to @movie
-    else
-      render :show
-    end
+       flash[:notice] = "\"#{title}\" was deleted successfully."
+       redirect_to @movie
+     else
+       flash[:error] = "There was an error deleting the movie."
+       render :show
+     end
   end
- 
-   private
-   def movie_params
-     params.require(:movie).permit(:title)
-   end
+
+  private
+  def set_movie
+    @movie = Movie.find(params[:id])
+  end
+
+  def movie_params
+    params.require(:movie).permit(:title, :image)
+  end
+
 end
