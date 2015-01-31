@@ -7,7 +7,7 @@ class TunesController < ApplicationController
   end
 
   def new
-    @tune = current_user.tunes.build
+    @tune = Tune.new
   end
 
   def edit
@@ -18,7 +18,7 @@ class TunesController < ApplicationController
   end
 
   def create
-    @tune = current_user.tunes.build(tune_params)
+    @tune = Tune.new(tune_params)
     if @tune.save
       redirect_to @tune, notice: 'New Music Added!'
     else

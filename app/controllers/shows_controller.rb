@@ -10,11 +10,11 @@ class ShowsController < ApplicationController
   end
 
   def new
-    @show = current_user.shows.build
+    @show = Show.new
   end
 
   def create
-    @show = current_user.shows.build(show_params)
+    @show = Show.new(show_params)
     if @show.save
       redirect_to @show, notice: 'TV Show Added'
     else
