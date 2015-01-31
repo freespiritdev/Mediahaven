@@ -3,7 +3,7 @@
     <h1>
        <em><span style="color: #33CCFF;">Welcome to Media Haven</span></em>
     </h1>
-    <h4 align="center">Add TV Shows, Movies, Music!</h4>
+    <h4 align="center">Add TV Shows, Movies & Music!</h4>
     <p align="center">
     <%- if user_signed_in? %>
       <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
@@ -16,6 +16,7 @@
 </div>
 
 <div class="container">
+
   <div>
     <div class="col-sm-2 col-sm-3">
       <h3 align="center">Movies</h3>  
@@ -26,3 +27,4 @@
       </div>
     </div>
   </div>
+

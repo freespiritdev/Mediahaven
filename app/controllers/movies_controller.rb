@@ -18,14 +18,15 @@ class MoviesController < ApplicationController
     if @movie.save
       redirect_to movies_path, notice: 'Movie Added!'
     else
-      render 'new'
+      render action: 'new'
     end
   end
 
   def update
     @movie = Movie.find(params[:id])
+
     if @movie.update(movie_params)
-      redirect_to @movie, notice: 'Movie successfully updated.'
+      redirect_to movies_path, notice: 'Movie successfully updated.'
     else
       render action: 'edit'
     end
@@ -34,7 +35,6 @@ class MoviesController < ApplicationController
 
   def edit
   end
-
   
   def destroy
     @movie = Movie.find(params[:id])
