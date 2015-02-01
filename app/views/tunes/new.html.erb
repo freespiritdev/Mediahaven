@@ -1,6 +1,5 @@
-<%= form_for @tune do |f| %>
-   <%= f.label :title %>
-   <%= f.text_field :title %>
- 
-   <%= f.submit "Update", class: 'btn btn-info' %>
- <% end %>
+<h1>New Tunes</h1>
+
+<%= render partial: 'form' %>
+
+<%= link_to 'Back', tunes_path %>

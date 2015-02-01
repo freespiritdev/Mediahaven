@@ -1,6 +1,9 @@
 <h1>Movies</h1>
 
 <div align="center"><%= link_to 'Add Movie', new_movie_path %></div>
-<% @movies.each do |movie| %>
-<p><%= link_to movie.title, movie_path(movie.id) %>
+<br>
+<br>
+
+<% @movies.each do |movie| %> |
+  <%= link_to movie.title, movie_path(movie.id) %>
 <% end %>

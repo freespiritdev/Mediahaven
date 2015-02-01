@@ -1,4 +1,7 @@
 <h1>TV Shows</h1>
-<% @shows.each do |show| %>
-<p><%= link_to show.title, show_path(show.id) %>
+
+<div align="center"><%= link_to 'Add Movie', new_show_path %></div>
+
+<% @shows.each do |show| %> |
+  <%= link_to show.title, show_path(show.id) %>
 <% end %>
