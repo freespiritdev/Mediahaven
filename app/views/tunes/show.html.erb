@@ -1,5 +1,10 @@
 <h1><%= @tune.title %></h1>
+<div class="row">
+  <div class="col-md-4">
+  <%= image_tag @tune.image.url(:medium) %>
 <br>
+  </div>
+</div>
 
 <%= link_to "Edit", edit_tune_path(@tune) %> |
 <%= link_to 'Back', tunes_path %>

@@ -1,7 +1,14 @@
 <h1>TV Shows</h1>
 
-<div align="center"><%= link_to 'Add Movie', new_tune_path %></div>
-
-<% @tunes.each do |tune| %> |
-  <%= link_to tune.title, tune_path(tune.id) %>
+<div align="center"><%= link_to 'Add Music', new_tune_path %></div>
+<br>
+<br>
+<% @tunes.each do |tune| %>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail" align = "center">
+      <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
+      <%= link_to tune.title, tune %> |
+      <%= link_to 'Remove', tune, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div> 
 <% end %>

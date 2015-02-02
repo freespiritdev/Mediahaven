@@ -21,7 +21,8 @@
     <div class="col-sm-2 col-sm-3">
       <h3 align="center">Movies</h3>  
         <div class="thumbnail" align = "center" width="10%"> 
-        <% @movies.each do |movie| %> 
+        <% @movies.each do |movie| %>
+        <%= link_to (image_tag movie.image.url(:medium), class: 'image') , movie %> 
         <%= link_to movie.title, movie %> |
         <% end %>
       </div>
@@ -33,6 +34,7 @@
       <h3 align="center">TV Shows</h3>  
         <div class="thumbnail" align = "center" width="10%">   
         <% @shows.each do |show| %> 
+        <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
         <%= link_to show.title, show %> |
         <% end %>
         </div>
@@ -44,7 +46,7 @@
       <h3 align="center">Music</h3>  
         <div class="thumbnail" align = "center" width="10%">
         <% @tunes.each do |tune| %>
-     
+        <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
         <%= link_to tune.title, tune %> |
         <% end %>
         </div>

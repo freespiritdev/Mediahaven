@@ -1,7 +1,10 @@
-<%= simple_form_for @tune do |f| %>
+<%= simple_form_for @tune, html: { :multipart => true }  do |f| %>
   <div class="form-inputs">
     <%= f.label :title %>
     <%= f.text_field :title %>
+    <%= f.label :image %> 
+    <%= f.text_field :image %> 
+    <%= f.file_field :image %>
     <%= f.submit "Update", class: 'btn btn-info' %>
   </div>
  <% end %>

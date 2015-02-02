@@ -38,3 +38,5 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.1.1'
+
+gem 'paperclip'

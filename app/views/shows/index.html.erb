@@ -1,7 +1,15 @@
 <h1>TV Shows</h1>
 
-<div align="center"><%= link_to 'Add Movie', new_show_path %></div>
+<div align="center"><%= link_to 'Add TV Show', new_show_path %></div>
+<br>
+<br>
+<% @shows.each do |show| %> 
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail" align = "center">
+      <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
+      <%= link_to show.title, show %>
+      <%= link_to 'Remove', show, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div> 
 
-<% @shows.each do |show| %> |
-  <%= link_to show.title, show_path(show.id) %>
 <% end %>
