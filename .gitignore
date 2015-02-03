@@ -16,3 +16,6 @@
 /tmp
 
 /log/development.log
+
+# Ignore application configuration
+/config/application.yml
