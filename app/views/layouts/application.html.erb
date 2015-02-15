@@ -9,18 +9,15 @@
 <body>
 
   <div class="container-fluid">
-      <ul class="nav nav-tabs">
-      
-      <%= link_to "Home", root_path %> |
-      <%= link_to "TV Shows", shows_path %>|
-      <%= link_to "Movies", movies_path %> |
-      <%= link_to "Music", tunes_path %> |
-      <%= link_to "About", about_path %>
-     
-      </ul>
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> 
+    <ul class="nav nav-tabs">  
+    <%= link_to "Home", root_path %> |
+    <%= link_to "TV Shows", shows_path %>|
+    <%= link_to "Movies", movies_path %> |
+    <%= link_to "Music", tunes_path %> |
+    <%= link_to "About", about_path %>
+    </ul>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
   <%= yield %>
 
   <footer align="center"> <div>
