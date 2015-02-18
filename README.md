@@ -1,5 +1,4 @@
-## Media Haven: TV and Movie Reviews
+## Media Haven: TV, Movies and Music!
 
 Heroku link [Heroku](http://avyishimediahaven.herokuapp.com)
 
-My Movie and TV Show review app!!
