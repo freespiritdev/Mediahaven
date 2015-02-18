@@ -12,9 +12,12 @@
   margin-top: 9px;
 }
 
-html, body {
+html,
+body {
   background: #000A00;
-  height: 100%;
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
 a {
@@ -92,12 +95,16 @@ div {
   position:float
 }
 
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
 
-footer {
+#footer {
   width:100%;
-  height:40px;
+  height:20px;
   position:absolute;
   bottom:0;
   left:0;
-  background:#333333;
+  background:#000000;
 }

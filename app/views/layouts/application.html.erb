@@ -7,31 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
+    <div class="container-fluid">
+      <ul class="nav nav-tabs">  
+        <%= link_to "Home", root_path %> |
+        <%= link_to "TV Shows", shows_path %>|
+        <%= link_to "Movies", movies_path %> |
+        <%= link_to "Music", tunes_path %> |
+        <%= link_to "About", about_path %>
+      </ul>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> 
+    <%= yield %>
 
-  <div class="container-fluid">
-    <ul class="nav nav-tabs">  
-    <%= link_to "Home", root_path %> |
-    <%= link_to "TV Shows", shows_path %>|
-    <%= link_to "Movies", movies_path %> |
-    <%= link_to "Music", tunes_path %> |
-    <%= link_to "About", about_path %>
-    </ul>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> 
-  <%= yield %>
-
-  <footer class="footer" align="center"> <div>
-    <%= link_to "Home", root_path %> |
-    <%= link_to "TV Shows", shows_path %>|
-    <%= link_to "Movies", movies_path %> |
-    <%= link_to "Music", tunes_path %> |
-    <%= link_to "About", about_path %> 
-  </div>
+      <footer id="footer" align="center"> <div>
+        <%= link_to "Home", root_path %> |
+        <%= link_to "TV Shows", shows_path %>|
+        <%= link_to "Movies", movies_path %> |
+        <%= link_to "Music", tunes_path %> |
+        <%= link_to "About", about_path %> 
+        <br>
     
-  <em>
-    Copyright &copy; 2015 CBS VI 360
-  </em>
-  </footer>
-
-</body>
+        <em>
+          Copyright &copy; 2015 CBS VI 360
+        </em>
+      </footer>
+    </div>
+  </body>
 </html>
