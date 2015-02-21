@@ -1,3 +1,13 @@
+<div>
+  <%= form_tag search_tunes_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
+  <%= text_field_tag :search, params[:search], class: "form-control" %>
+  <%= submit_tag "Search Music", name: nil, class: "btn btn-info" %>
+  <% end %>
+</div>
+
+<br>
+<br>
+
 <h1>Music</h1>
 
 <div align="center"><%= link_to 'Add Music', new_tune_path %></div>

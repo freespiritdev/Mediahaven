@@ -2,6 +2,14 @@ class TunesController < ApplicationController
   before_action :set_tune, only: [:show,:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+  def search
+    if params[:search].present?
+      @tunes = Tune.search(params[:search])
+    else
+      @tunes = Tune.all
+    end
+  end
+
   def index
     @tunes = Tune.all
   end

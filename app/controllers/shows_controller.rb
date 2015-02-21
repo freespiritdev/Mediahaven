@@ -2,6 +2,14 @@ class ShowsController < ApplicationController
   before_action :set_show, only: [:show,:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+  def search
+    if params[:search].present?
+      @shows = Show.search(params[:search])
+    else
+      @shows = Show.all
+    end
+  end
+  
   def index
     @shows = Show.all
   end

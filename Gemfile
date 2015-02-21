@@ -42,3 +42,6 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'paperclip'
 
 gem 'figaro', '1.1.0'
+
+gem 'searchkick', '~> 0.8.7'
+
