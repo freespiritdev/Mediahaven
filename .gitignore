@@ -19,6 +19,7 @@
 
 # Ignore application configuration
 /config/application.yml
+/config/secrets.yml
 public/system/movies/images
 public/system/shows/images
 public/system/tunes/images
