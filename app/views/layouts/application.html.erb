@@ -7,38 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="pull-right user-info">
-    <% if current_user %>
-      <em> Hello <%= current_user.email %>!</em> <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-    <% end %>
-  </div>
+    <div class="pull-right user-info">
+      <% if current_user %>
+        <em> Hello <%= current_user.email %>!</em> <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <% else %>
+      <% end %>
+    </div>
 
 
-  <div id="wrapper">
-    <div class="container-fluid">
-      <ul class="nav nav-tabs">  
-        <%= link_to "Home", root_path %> |
-        <%= link_to "TV Shows", shows_path %>|
-        <%= link_to "Movies", movies_path %> |
-        <%= link_to "Music", tunes_path %> |
-        <%= link_to "About", about_path %>
-      </ul>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> 
-    <%= yield %>
+    <div id="wrapper">
+      <div class="container-fluid">
+        <ul class="nav nav-tabs">  
+          <%= link_to "Home", root_path %> |
+          <%= link_to "TV Shows", shows_path %>|
+          <%= link_to "Movies", movies_path %> |
+          <%= link_to "Music", tunes_path %> |
+          <%= link_to "About", about_path %>
+        </ul>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p> 
+      <%= yield %>
 
-      <footer id="footer" align="center"> <div>
-        <%= link_to "Home", root_path %> |
-        <%= link_to "TV Shows", shows_path %>|
-        <%= link_to "Movies", movies_path %> |
-        <%= link_to "Music", tunes_path %> |
-        <%= link_to "About", about_path %> 
-        </div>
+      <footer id="footer" align="center"> 
+          <%= link_to "Home", root_path %> |
+          <%= link_to "TV Shows", shows_path %>|
+          <%= link_to "Movies", movies_path %> |
+          <%= link_to "Music", tunes_path %> |
+          <%= link_to "About", about_path %> 
         <br>
-        <em>
-          Copyright &copy; 2015 CBS VI 360
-        </em>
+          <em>
+            Copyright &copy; 2015 CBS VI 360
+          </em>
       </footer>
     </div>
   </body>
