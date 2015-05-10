@@ -25,5 +25,6 @@ gem 'paperclip'
 gem 'figaro', '1.1.0'
 gem 'searchkick', '~> 0.8.7'
 gem 'friendly_id', '~> 5.1.0'
+gem 'omniauth-facebook'
 
 
