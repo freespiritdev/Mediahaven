@@ -9,10 +9,10 @@ class UsersController < ApplicationController
        render "devise/registrations/edit"
      end
    end
-
-   private
+private
  
    def user_params
      params.require(:user).permit(:name)
    end
+   
 end
