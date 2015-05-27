@@ -1,6 +1,7 @@
 <div>
   <%= form_tag search_tunes_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
   <%= text_field_tag :search, params[:search], class: "form-control" %>
+  <br>
   <%= submit_tag "Search Music", name: nil, class: "btn btn-info" %>
   <% end %>
 </div>
