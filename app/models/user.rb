@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
          :omniauthable#, :omniauth_providers => [:facebook], [:twitter]
 
 
+  has_many :movies
+  has_many :shows
+  has_many :tunes
+
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.email = auth.info.email
