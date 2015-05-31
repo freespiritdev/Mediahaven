@@ -13,7 +13,7 @@ class ReviewtvsController < ApplicationController
   def create
     @reviewtv = Reviewtv.new(reviewtv_params)
     @reviewtv.user_id = current_user.id
-    @reviewtv.movie_id = @movie.id
+    @reviewtv.show_id = @show.id
    
     if @reviewtv.save
       redirect_to @show

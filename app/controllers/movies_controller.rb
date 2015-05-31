@@ -19,11 +19,11 @@ class MoviesController < ApplicationController
   end
 
   def new
-    @movie = current_user.movies.build
+    @movie = Movie.new
   end
 
   def create
-    @movie = current_user.movies.build(movie_params)
+    @movie = Movie.new(movie_params)
     
     if @movie.save
       redirect_to @movie, notice: 'Movie Added!'
