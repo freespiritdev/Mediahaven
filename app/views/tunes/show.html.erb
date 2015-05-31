@@ -5,6 +5,20 @@
 <br>
   </div>
 </div>
+
+<div class="col-md-7 col-md-offset-1">
+    <h1 class="review_title">Reviews</h1><br>
+    <% if @reviewtunes.blank? %>
+      <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
+      <%= link_to "Review it", new_tune_reviewtune_path(@tune), class: "btn btn-info" %>
+    <% else %>
+      <% @reviewtunes.each do |reviewtune| %>
+        <div class="reviews">
+        <p align="center"><%= reviewtune.comment %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 <%= link_to "Edit", edit_tune_path(@tune) %> |
 <%= link_to 'Back', tunes_path %>
 

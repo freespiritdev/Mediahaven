@@ -5,6 +5,23 @@
 <br>
   </div>
 </div>
+
+
+<div class="col-md-7 col-md-offset-1">
+    <h1 class="reviewtv_title">Reviews</h1><br>
+    
+    <% if @reviewtvs.blank? %>
+      <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
+      <%= link_to "Review it!", new_show_reviewtv_path(@show), class: "btn btn-info" %>
+      <% else %>
+        <% @reviewtvs.each do |reviewtv| %>
+          <div class="reviewtvs">
+            <p align="center"><%= reviewtv.comment %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    
 <%= link_to "Edit", edit_show_path(@show) %>
 <%= link_to 'Back', shows_path %>
 

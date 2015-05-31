@@ -1,0 +1,23 @@
+<%= simple_form_for([@show, @reviewtv]) do |f| %>
+  <% if @reviewtv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reviewtv.errors.count, "error") %> prohibited this reviewtv from being saved:</h2>
+
+      <ul>
+      <% @reviewtv.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit", class: 'btn btn-info' %>
+  </div>
+<% end %>
+
+ 
