@@ -12,6 +12,8 @@ class ReviewtunesController < ApplicationController
 
   def create
     @reviewtune = Reviewtune.new(reviewtune_params)
+    @reviewtune.user_id = current_user.id
+    @reviewtune.show_id = @show.id
 
     if @reviewtune.save
       redirect_to @tune
