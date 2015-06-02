@@ -15,6 +15,10 @@ class WelcomeController < ApplicationController
 
    def show_params
      params.require(:show).permit(:title, :image)
-  end
+   end
+
+   def tune_params
+     params.require(:tune).permit(:title, :image)
+   end
 
 end
