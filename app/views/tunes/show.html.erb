@@ -3,6 +3,8 @@
   <div class="col-md-4">
   <%= image_tag @tune.image.url(:medium) %>
 <br>
+  <div class="table-responsive">
+    <%= link_to "Review it!", new_tune_reviewtune_path(@tune), class: "btn btn-info" %>
   </div>
 </div>
 

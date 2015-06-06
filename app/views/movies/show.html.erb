@@ -3,8 +3,10 @@
   <div class="col-md-4">
 <%= image_tag @movie.image.url(:medium) %>
 <br>
+    <div class="table-responsive">
+      <%= link_to "Review it!", new_movie_review_path(@movie), class: "btn btn-info" %>
+    </div>
   </div>
-</div>
 
 <div class="col-md-7 col-md-offset-1">
     <h1 class="review_title">Reviews</h1><br>

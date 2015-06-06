@@ -23,6 +23,7 @@ class TunesController < ApplicationController
   end
 
   def show
+    @reviewtunes = Reviewtune.where(tune_id: @tune.id).order("Created_at DESC")
   end
 
   def create

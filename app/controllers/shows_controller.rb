@@ -15,6 +15,7 @@ class ShowsController < ApplicationController
   end
 
   def show
+    @reviewtvs = Reviewtv.where(show_id: @show.id).order("Created_at DESC")
   end
 
   def new

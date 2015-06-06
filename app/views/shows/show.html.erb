@@ -3,6 +3,8 @@
   <div class="col-md-4">
     <%= image_tag @show.image.url(:medium) %>
 <br>
+  <div class="table-responsive">
+    <%= link_to "Review it!", new_show_reviewtv_path(@show), class: "btn btn-info" %>
   </div>
 </div>
 
