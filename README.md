@@ -1,6 +1,6 @@
 ## Media Haven: Add TV Shows, Movies, Music & Review Them!
 
-Heroku link [Heroku] (https://mediahaven.herokuapp.com)
+Heroku link [Heroku](https://mediahaven.herokuapp.com)
 
 ![alt tag](https://cloud.githubusercontent.com/assets/6601494/7844875/1e8bacba-0468-11e5-8f86-0bb9ab257341.jpg)
 
