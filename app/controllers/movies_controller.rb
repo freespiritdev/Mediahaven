@@ -2,11 +2,12 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show,:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
    
- def search
+  def search
     if params[:search].present?
-      @movies = Movie.search(params[:search])
+    @movies = Movie.search(params[:search])
+    
     else
-      @movies = Movie.all
+    @movies = Movie.all
     end
   end
 
@@ -38,6 +39,7 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params[:id])
+
     if @movie.update(movie_params)
       redirect_to @movie, notice: 'Movie successfully updated.'
     else
