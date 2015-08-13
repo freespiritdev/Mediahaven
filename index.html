@@ -1,78 +1,164 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <title>Mediahaven</title>
+  <link data-turbolinks-track="true" href="/assets/application-45c4c741896d488822c6a293bbea173f.css" media="all" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
-  <title>MediaHaven</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script data-turbolinks-track="true" src="/assets/application-6baa89250068fd75ca650745c9b280b6.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="1DTzkskk3OCNmBRAmeZy7vzPgo+5Bzik8byKNZukZHI=" name="csrf-token" />
 </head>
+
 <body>
-  <nav class="main-nav">
-    <div>
-      <ul>
-          <a href=""><span>Home</span></a> | 
-          <a href=""><span>TV Shows</span></a> |     
-          <a href=""><span>Movies</span></a> |
-          <a href=""><span>Music</span></a> |
-          <a href=""><span>About</span></a>           
-      </ul>
 
-      <div align="right">
-        <a href="">Sign In</a> or 
-        <a href="">Sign Up</a>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'your-app-id',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div id="wrapper">
+      <div class="container-fluid">
+        <ul class="nav nav-tabs">  
+          <a href="/">Home</a> |
+          <a href="/shows">TV Shows</a>|
+          <a href="/movies">Movies</a> |
+          <a href="/tunes">Music</a> |
+          <a href="/about">About</a>
+
+       <div class="pull-right user-info">
+          
+            <h5>Hi, you're signed in as:</h5> <em><a href="/users/edit">User</a> </em>
+            <a class="movielink" data-method="delete" href="/users/sign_out" rel="nofollow">Sign out</a>
+          <div align = "center"><img src="" /></div> <br>
       </div>
-    </div>
+        </ul>
 
-   
-  </nav>
+      <div style="background:transparent !important" class="jumbotron">
+    <div id="content">
+    <h1>
+      <em><span style="color: #33CCFF;">Welcome to Media Haven</span></em>
+    </h1>
+    <h4 align="center">TV Shows, Movies & Music!</h4>
+    <p align="center">
+        <a data-method="delete" href="/users/sign_out" rel="nofollow">Sign Out</a>
+    </p>
+  </div>
+</div>
 
-  <h1 align="center">
-    <span style="color: #33CCFF;">Welcome to Media Haven</span>
-  </h1>
-
-  <h4 align="center">TV Shows, Movies & Music Review!</h4>
-
-  
   <div>
     <h3 align="center">Movies</h3>  
-      
         <div class="col-sm-4 col-md-3">
           <div class="thumbnail" align = "center">
-            <a href=""><span></span></a>
+            <a href="/movies/4"><img alt="Kingsman2" class="image" src="kingsman2.jpg" /></a>
+            <a href="/movies/4">Kingsman: The Secret Service</a>
           </div>
-        </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/movies/3"><img alt="Jurassic" class="image" src="Jurassic.jpg" /></a>
+            <a href="/movies/3">Jurassic World</a>
+          </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/movies/2"><img alt="Furious7" class="image" src="furious7.jpg" /></a>
+            <a href="/movies/2">Furious 7</a>
+          </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/movies/1"><img alt="Avengers" class="image" src="avengers.jpg" /></a>
+            <a href="/movies/1">The Avengers</a>
+          </div>
+        </div> 
   </div>
+  <br>
 
   <div>
     <h3 align="center">TV Shows</h3>  
-      
         <div class="col-sm-4 col-md-3">
           <div class="thumbnail" align = "center">
-            <a href=""><span></span></a>
+            <a href="/shows/5"><img alt="Flash" class="image" src="flash.jpg" /></a>
+            <a href="/shows/5">The Flash</a>
           </div>
-        </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="arrow.jpg"><img alt="Arrow" class="image" src="arrow.jpg"></a>
+            <a href="/shows/4">Arrow</a>
+          </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="grimm.jpg"><img alt="Grimm" class="image" src="grimm.jpg"></a>
+            <a href="/shows/2">Grimm</a>
+          </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/shows/1"><img alt="Gotham" class="image" src="gotham.jpg" /></a>
+            <a href="/shows/1">Gotham</a>
+          </div>
+        </div> 
   </div>
-
+  <br>
+  
   <div>
     <h3 align="center">Music</h3>  
-      
         <div class="col-sm-4 col-md-3">
           <div class="thumbnail" align = "center">
-            <a href="X.jpg"><span></span></a>
+            <a href="/tunes/4"><img alt="Samsmith" class="image" src="samsmith.jpg" /></a>
+            <a href="/tunes/4">In the Lonely Hour, Sam Smith</a>
           </div>
-        </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/tunes/3"><img alt="Lumineers" class="image" src="Lumineers.jpg" /></a>
+            <a href="/tunes/3">The Lumineers, The Lumineers</a>
+          </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/tunes/2"><img alt="X" class="image" src="X.jpg"></a>
+            <a href="/tunes/2">Multiply, Ed Sheeran</a>
+          </div>
+        </div> 
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail" align = "center">
+            <a href="/tunes/1"><img alt="Awesomemix" class="image" src="awesomemix.jpg" /></a>
+            <a href="/tunes/1">Awesome Mix Vol. 1, Guardians of the Galaxy Sountrack</a>
+          </div>
+        </div> 
   </div>
+</div>
+<br>
 
-  <footer id="footer" align="center"> 
-          <a href=""><span>Home</span></a> |
-          <a href=""><span>TV Shows</span></a> |
-          <a href=""><span>Movies</span></a> |
-          <a href=""><span>Music</span></a> |
-          <a href=""><span>About</span></a> 
-          
+      <footer id="footer" align="center"> 
+          <a href="/">Home</a> |
+          <a href="/shows">TV Shows</a>|
+          <a href="/movies">Movies</a> |
+          <a href="/tunes">Music</a> |
+          <a href="/about">About</a> 
         <br>
           <em>
-            Copyright &copy; 2015 FreeSpirit Development
+            Copyright &copy; 2015 FreeSpirit Development.
           </em>
       </footer>
-
-</body>
+    </div>
+  </body>
 </html>
