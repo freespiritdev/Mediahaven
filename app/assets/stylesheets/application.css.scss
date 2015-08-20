@@ -1,17 +1,5 @@
 @import "bootstrap";
 
-.hide {
-  display: none;
-}
-
-.nav {
-  margin-top: 5px;
-}
-
-.user-info {
-  margin-top: 9px;
-}
-
 html,
 body {
   background: #000A00;
@@ -65,20 +53,11 @@ th{
 
 label {
   color: #FFFFFF;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
 }
-
-.checkbox {
-  display: block;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-  label {
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-weight: normal;
-    cursor: pointer;
-  }
 
 th {
     display: table-cell;
@@ -93,6 +72,34 @@ table td, table td * {
 
 div {
   float:center;
+}
+
+.hide {
+  display: none;
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+.user-info {
+  margin-top: 9px;
+}
+
+.image {
+  padding-right: 10px
+}
+
+.checkbox {
+  display: block;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnail {
+  background-color: #000;
+  display: block;
 }
 
 #form {
