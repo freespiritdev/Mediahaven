@@ -2,7 +2,7 @@
 
 Heroku link [MediaHaven](https://mediahaven.herokuapp.com)
 
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/9372631/a711e86e-4695-11e5-88e5-9f56a901985c.png)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/9372661/06119d6e-4696-11e5-9574-546f0bd00b40.jpg)
 
 ![alt tag](https://cloud.githubusercontent.com/assets/6601494/7849617/2dbfb1f8-048c-11e5-9c2d-649657baee1c.jpg)
 
