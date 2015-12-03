@@ -1,3 +1,4 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 html,
@@ -118,4 +119,17 @@ div {
   bottom:0;
   left:0;
   background:#000000;
+}
+
+#footer {
+  border: 2px solid #ccc;
+    background-color: #fff;
+    padding:20px;
+    .box-right {
+        float : right;
+        border: 1px solid #000;
+   h1 {
+            font-size: 24px;
+        }
+    }
 }
