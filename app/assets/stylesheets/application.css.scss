@@ -13,6 +13,9 @@ body {
 a {
   color: #33CCFF;
 }
+a:hover{
+  color: #fff;
+}
 
 a.movielink {
       color: #FFFFFF;
@@ -104,4 +107,7 @@ div {
   bottom:0;
   left:0;
   background:#000000;
+}
+#bottom-footer{
+  font-size: .8em;
 }
