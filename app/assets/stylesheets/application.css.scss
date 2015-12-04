@@ -76,7 +76,7 @@ div {
 }
 
 .image {
-  padding-right: 10px
+  padding-right: 5px;
 }
 
 .checkbox {
@@ -87,7 +87,8 @@ div {
 
 .thumbnail {
   background-color: #000;
-  display: block;
+  display: inline-block;
+  padding: 28px;
 }
 
 .form-control{
