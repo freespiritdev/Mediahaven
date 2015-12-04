@@ -1,19 +1,20 @@
-<div>
-  <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
-  <%= text_field_tag :search, params[:search], class: "form-control" %>
-  <br>
-  <%= submit_tag "Search Movies", name: nil, class: "btn btn-info" %>
-  <% end %>
+<div class="search">
+  <div class="col-md-12">
+    <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
+    <%= text_field_tag :search, params[:search], class: "form-control" %>
+    <br>
+    <%= submit_tag "Search Movies", name: nil, class: "btn btn-info" %>
+    <% end %>
+  </div>
 </div>
 <br>
 <br>
 
 <div align="center"><%= link_to 'Add Movie', new_movie_path %></div>
 <br>
-<br>
 
   <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3">
+    <div class="col-xs-8 col-sm-4 col-lg-3">
       <div class="thumbnail" align = "center">
         <%= link_to (image_tag movie.image.url(:medium), class: 'image') , movie %>
         <%= link_to movie.title, movie %> |

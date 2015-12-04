@@ -1,9 +1,11 @@
-<div>
-  <%= form_tag search_tunes_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
-  <%= text_field_tag :search, params[:search], class: "form-control" %>
-  <br>
-  <%= submit_tag "Search Music", name: nil, class: "btn btn-info" %>
-  <% end %>
+<div class="search">
+  <div class="col-md-12">
+    <%= form_tag search_tunes_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
+    <%= text_field_tag :search, params[:search], class: "form-control" %>
+    <br>
+    <%= submit_tag "Search Music", name: nil, class: "btn btn-info" %>
+    <% end %>
+  </div>
 </div>
 
 <br>
@@ -11,13 +13,12 @@
 
 <div align="center"><%= link_to 'Add Music', new_tune_path %></div>
 <br>
-<br>
-<% @tunes.each do |tune| %>
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail" align = "center">
-      <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
-      <%= link_to tune.title, tune %> |
-      <%= link_to 'Remove', tune, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+  <% @tunes.each do |tune| %>
+    <div class="col-xs-8 col-sm-4 col-lg-3">
+      <div class="thumbnail" align = "center">
+        <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
+        <%= link_to tune.title, tune %> |
+        <%= link_to 'Remove', tune, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
   </div> 
-<% end %>
+  <% end %>
