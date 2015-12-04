@@ -1,5 +1,5 @@
 <div style="background:transparent !important" class="jumbotron">
-    <div id="content">
+  <div id="content">
     <h1>
       <em><span style="color: #33CCFF;">MediaHaven</span></em>
     </h1>
@@ -15,43 +15,42 @@
   </div>
 </div>
 
-  <div>
-    <h3 align="center"></h3>  
-      <% @movies.each do |movie| %>
-        <div class="col-sm-4 col-md-3">
-          <div class="thumbnail" align = "center">
-            <%= link_to (image_tag movie.image.url(:medium), class: 'image') , movie %>
-            <%= link_to movie.title, movie %>
-          </div>
-        </div> 
-      <% end %>
-  </div>
-  <br>
+<div>
+  <h3 align="center"></h3>  
+    <% @movies.each do |movie| %>
+      <div class="col-sm-4 col-md-3">
+        <div class="thumbnail" align = "center">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image') , movie %>
+          <%= link_to movie.title, movie %>
+        </div>
+      </div> 
+    <% end %>
+</div>
+<br>
 
-  <div>
-    <h3 align="center"></h3>  
-      <% @shows.each do |show| %> 
-        <div class="col-sm-4 col-md-3">
-          <div class="thumbnail" align = "center">
-            <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
-            <%= link_to show.title, show %>
-          </div>
-        </div> 
-      <% end %>
-  </div>
-  <br>
+<div>
+  <h3 align="center"></h3>  
+    <% @shows.each do |show| %> 
+      <div class="col-sm-4 col-md-3">
+        <div class="thumbnail" align = "center">
+          <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
+          <%= link_to show.title, show %>
+        </div>
+      </div> 
+    <% end %>
+</div>
+<br>
   
-  <div>
-    <h3 align="center"></h3>  
-      <% @tunes.each do |tune| %>
-        <div class="col-sm-4 col-md-3">
-          <div class="thumbnail" align = "center">
-            <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
-            <%= link_to tune.title, tune %>
-          </div>
-        </div> 
-      <% end %>
-  </div>
+<div>
+  <h3 align="center"></h3>  
+    <% @tunes.each do |tune| %>
+      <div class="col-sm-4 col-md-3">
+        <div class="thumbnail" align = "center">
+          <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
+          <%= link_to tune.title, tune %>
+        </div>
+      </div> 
+    <% end %>
 </div>
 <br>
 
