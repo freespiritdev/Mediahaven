@@ -3,8 +3,10 @@
     <h1>
       <em><span style="color: #33CCFF;">MediaHaven</span></em>
     </h1>
+    <%= link_to image_tag("Blindspot3.jpg") %>
     <h4 align="center">TV Shows, Movies & Music!</h4>
     <p align="center">
+    
       <%- if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
       <% else %>
