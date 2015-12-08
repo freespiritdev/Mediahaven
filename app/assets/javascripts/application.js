@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require jquery.flexslider
 //= require turbolinks
+//= require main.js
 //= require_tree .
 
 
