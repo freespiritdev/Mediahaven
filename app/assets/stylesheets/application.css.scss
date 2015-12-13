@@ -31,6 +31,11 @@ em {
   color: #FFFFFF;
 }
 
+span{
+  font-size: 42px;
+  font-weight: bold;
+}
+
 h1 {
     text-align: center;
     color: #FFFFFF;
@@ -102,8 +107,9 @@ div {
 }
 
 .jumbotron {
-  height: 650px;
+  height: 700px;
   clear: both;
+  text-align: center;
 }
 
 #form {
