@@ -42,7 +42,6 @@
 
        <div class="pull-right user-info">
           <% if current_user %>
-          <%= image_tag(current_user.image.tiny.url) if current_user.image? %>
             <h5>Hi, you're signed in as:</h5> <em><%= link_to (current_user.name || current_user.email), edit_user_registration_path %> </em>
             <%= link_to "Sign out", destroy_user_session_path, class: 'movielink', method: :delete %>
           <div align = "center"><%= image_tag(current_user.image)%></div> <br>
