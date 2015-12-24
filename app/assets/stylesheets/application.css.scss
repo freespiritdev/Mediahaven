@@ -140,4 +140,8 @@ div {
  text-align: center;
 }
 
-@media screen and (max-width: 667px) { }
+@media screen and (max-width: 667px) { 
+  .container-fluid{
+    display: none;
+  }
+}
