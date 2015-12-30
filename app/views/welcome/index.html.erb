@@ -3,7 +3,48 @@
     <h1>
       <em><span style="color: #33CCFF;">MediaHaven</span></em>
     </h1>
-    <%= link_to image_tag("StarWars2.jpg") %>  
+    <div id="" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#" data-slide-to="0" class="active"></li>
+        <li data-target="#" data-slide-to="1"></li>
+        <li data-target="#" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= link_to image_tag("StarWars2.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %> 
+          <div class="carousel-caption">
+            <h4>Star Wars: The Force Awakens</h4>
+          </div>
+        </div>
+        <div class="item">
+        <%= link_to image_tag("Blindspot3.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %>
+          <div class="carousel-caption">
+            <h4>Blindspot</h4>
+          </div>
+        </div>
+        <h3>Fall 2015</h3>
+        <div class="item">
+        <%= link_to image_tag("25.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %>
+          <div class="carousel-caption">
+            <h4>25</h4>
+          </div>
+        </div>
+        <h3></h3>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
     <h4 align="center">TV Shows, Movies & Music!</h4>
     <p align="center">

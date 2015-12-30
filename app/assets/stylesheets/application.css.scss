@@ -140,6 +140,11 @@ div {
   text-align: center;
 }
 
+/* Center image */
+.carousel-inner img {
+  margin: auto;
+}
+
 @media screen and (max-width: 667px) { 
   .container-fluid{
     display: none;
