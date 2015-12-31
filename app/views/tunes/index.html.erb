@@ -14,7 +14,7 @@
 <div align="center"><%= link_to 'Add Music', new_tune_path %></div>
 <br>
   <% @tunes.each do |tune| %>
-    <div class="col-xs-8 col-sm-4 col-lg-3" >
+    <div class="col-xs-8 col-sm-4 col-lg-3">
       <div class="thumbnail" align = "center">
         <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
         <%= link_to tune.title, tune %> |
