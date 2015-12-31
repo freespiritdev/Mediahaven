@@ -6,9 +6,11 @@
 
   <div class="col-md-4 col-md-offset-1">
     <h1 class="reviewtv_title">Reviews</h1><br>
+    <%= link_to "Review it!", new_show_reviewtv_path(@show), class: "btn btn-info" %>
+
     <% if @reviewtvs.blank? %>
       <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
-      <%= link_to "Review it!", new_show_reviewtv_path(@show), class: "btn btn-info" %>
+      
       <% else %>
         <% @reviewtvs.each do |reviewtv| %>
           <div class="reviewtvs">
