@@ -1,14 +1,10 @@
 <h1><%= @movie.title %></h1>
 <div class="row">
-  <div class="col-md-4">
-<%= image_tag @movie.image.url(:medium) %>
-<br>
-    <div class="table-responsive">
-      <%= link_to "Review it!", new_movie_review_path(@movie), class: "btn btn-info" %>
-    </div>
+  <div class="col-md-5">
+    <%= image_tag @movie.image.url(:medium) %> 
   </div>
 
-<div class="col-md-7 col-md-offset-1">
+  <div class="col-md-4 col-md-offset-1">
     <h1 class="review_title">Reviews</h1><br>
     <% if @reviews.blank? %>
       <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
@@ -23,7 +19,7 @@
     <%= link_to "Edit", edit_movie_path(@movie) %> |
     <%= link_to 'Back', movies_path %>
   </div>
-
+</div>
 
 
 
