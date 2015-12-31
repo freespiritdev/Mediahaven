@@ -12,14 +12,13 @@
 
     <% if @reviewtvs.blank? %>
       <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
-      
-      <% else %>
-        <% @reviewtvs.each do |reviewtv| %>
-          <div class="reviewtvs">
-            <p align="center"><%= reviewtv.comment %></p>
-          </div>
-        <% end %>
+    <% else %>
+      <% @reviewtvs.each do |reviewtv| %>
+        <div class="reviewtvs">
+          <p align="center"><%= reviewtv.comment %></p>
+        </div>
       <% end %>
+    <% end %>
   </div>
 </div>
     
