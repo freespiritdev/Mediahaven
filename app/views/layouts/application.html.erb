@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediaHaven</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -36,18 +37,20 @@
           <%= link_to "Movies", movies_path %> |
           <%= link_to "Music", tunes_path %> |
           <%= link_to "About", about_path %>
-
-       <div class="pull-right user-info">
-          <% if current_user %>
-            <h5>Hi, you're signed in as:</h5> <em><%= link_to (current_user.name || current_user.email), edit_user_registration_path %> </em>
-            <%= link_to "Sign out", destroy_user_session_path, class: 'movielink', method: :delete %>
-          <div align = "center"><%= image_tag(current_user.image)%></div> <br>
-        <% else %>
-        <%= link_to "Sign In", new_user_session_path %> <em>or</em> 
-        <%= link_to "Sign Up", new_user_registration_path %><em><br>
-          <% end %>
-      </div>
+          
+          <div class="pull-right user-info">
+            <% if current_user %>
+              <h5>Hi, you're signed in as:</h5> <em><%= link_to (current_user.name || current_user.email), edit_user_registration_path %> </em>
+              <%= link_to "Sign out", destroy_user_session_path, class: 'movielink', method: :delete %>
+            <div align = "center"><%= image_tag(current_user.image)%></div> <br>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path %> <em>or</em> 
+              <%= link_to "Sign Up", new_user_registration_path %><em><br>
+            <% end %>
+          </div>
+          <h1><em><span style="color: #33CCFF;">MediaHaven</span></em></h1>
         </ul>
+     
 
        <% if flash[:notice] %>
         <div class="alert alert-success">
@@ -83,6 +86,5 @@
           </div>
       </footer>
     </div>
-
   </body>
 </html>
