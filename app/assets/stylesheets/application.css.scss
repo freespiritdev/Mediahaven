@@ -140,6 +140,15 @@ div {
   text-align: center;
 }
 
+input {
+ line-height: 2;
+}
+
+input[type="file"]{
+  display: inline-block;
+}
+
+
 /* Center image */
 .carousel-inner img {
   margin: auto;
