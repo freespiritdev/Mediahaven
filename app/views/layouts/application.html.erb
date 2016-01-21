@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mediahaven">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediaHaven</title>
@@ -51,6 +51,9 @@
           </div>
           <h1><em><span style="color: #33CCFF;">MediaHaven</span></em></h1>
         </ul>
+        <div class="" ng-view>
+          <%= yield %>
+        </div>
      
 
        <% if flash[:notice] %>
