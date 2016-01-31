@@ -1,13 +1,13 @@
-var mhApp = angular.module('mediahaven', ['ngRoute', 'ngResource']);
+var mApp = angular.module('mediahaven', ['ngRoute', 'ngResource']);
 
-mhApp.factory('Users', ['$resource', function($resource){
+mApp.factory('Users', ['$resource', function($resource){
   return $resource('/users.json', {}, {
     query: {method: 'GET', isArray: true},
     create: {method: 'POST'}
   })
 }]);
 
-mhApp.factory('Users', ['$resource', function($resource){
+mApp.factory('Users', ['$resource', function($resource){
   return $resource('/users/:id.json', {}, {
     show: {method: 'GET'},
     update: {method: 'PUT', params: {id: '@id'}},
@@ -15,7 +15,7 @@ mhApp.factory('Users', ['$resource', function($resource){
   });
 }]);
 
-mhApp.config([
+mApp.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $routeProvider.when('/users', {
     templateUrl: '/templates/users/index.html',
@@ -26,6 +26,6 @@ mhApp.config([
   });
 }]);
 
-mhApp.controller("UserAll", ['$scope', '$resource', 'Users', 'User', '$location', function($scope, $resource, Users, User, $location){
+mApp.controller("UserAll", ['$scope', '$resource', 'Users', 'User', '$location', function($scope, $resource, Users, User, $location){
   $scope.users = Users.query();
 }]);
