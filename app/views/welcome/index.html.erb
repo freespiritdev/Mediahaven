@@ -39,8 +39,6 @@
     </div>
 
     <h4>TV Shows, Movies, Music, Entertainment News & more!</h4>
-    <p align="center">
-    
       <%- if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
       <% else %>
@@ -52,10 +50,10 @@
 </div>
 
 <div>
-  <h3 align="center"></h3>  
+  <h3></h3>  
     <% @movies.each do |movie| %>
       <div class="col-xs-8 col-sm-4 col-lg-3">
-        <div class="thumbnail" align = "center">
+        <div class="thumbnail">
           <%= link_to (image_tag movie.image.url(:medium), class: 'image') , movie %>
           <%= link_to movie.title, movie %>
         </div>
@@ -68,7 +66,7 @@
   <h3 align="center"></h3>  
     <% @shows.each do |show| %> 
       <div class="col-xs-8 col-sm-4 col-lg-3">
-        <div class="thumbnail" align = "center">
+        <div class="thumbnail">
           <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
           <%= link_to show.title, show %>
         </div>
@@ -81,7 +79,7 @@
   <h3 align="center"></h3>  
     <% @tunes.each do |tune| %>
       <div class="col-xs-8 col-sm-4 col-lg-3">
-        <div class="thumbnail" align = "center">
+        <div class="thumbnail">
           <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
           <%= link_to tune.title, tune %>
         </div>
