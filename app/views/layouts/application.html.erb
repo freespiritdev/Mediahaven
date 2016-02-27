@@ -58,7 +58,7 @@
       <% end %>
       <%= yield %>
 
-      <footer id="footer" align="center"> 
+      <footer id="footer"> 
           <%= link_to "Home", root_path %> |
           <%= link_to "TV Shows", shows_path %>|
           <%= link_to "Movies", movies_path %> |
@@ -91,7 +91,7 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-    
+
     <script type="text/javascript">
       $( document ).ready(function() {
         $('.carousel').carousel();
