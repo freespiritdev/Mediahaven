@@ -53,8 +53,14 @@
           <%= flash[:alert] %>
         </div>
       <% end %>
-      <%= yield %>
+        <div class="featured">
+  
+        </div>
 
+        <div class="" ng-view>
+        <%= yield %>
+        </div>
+      
       <footer id="footer"> 
           <%= link_to "Home", root_path %> |
           <%= link_to "TV Shows", shows_path %>|
