@@ -6,6 +6,13 @@
     <%= submit_tag "Search Movies", name: nil, class: "btn btn-info" %>
     <% end %>
   </div>
+  <div>
+    <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
+    <%= text_field_tag :search, params[:search], class: "form-control" %> 
+    <div class="search">
+      <span class="fa fa-search"></span>
+  </div>
+    <% end %>
 </div>
 <br>
 <br>
