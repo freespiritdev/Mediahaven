@@ -19,7 +19,7 @@
           <%= link_to "Music", tunes_path %> |
           <%= link_to "Entertainment News", "#" %> |
           <%= link_to "About", about_path %>
-          
+          <a name="top"></a>
           <div class="pull-right user-info">
             <% if current_user %>
               <h5>Hi, you're signed in as:</h5> <em><%= link_to (current_user.name || current_user.email), edit_user_registration_path %> </em>
@@ -55,9 +55,16 @@
   
         </div>
 
-        <div class="" ng-view>
+      
+      <div class="" ng-view>
         <%= yield %>
-        </div>
+      </div>
+
+      <div>
+        <a href="#top"><h6>Back to top</h6></a>
+      </div>
+      <hr>
+
 
       <footer id="footer"> 
           <%= link_to "Home", root_path %> |
