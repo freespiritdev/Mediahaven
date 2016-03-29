@@ -33,49 +33,47 @@
           <h1><em><span>MediaHaven</span></em></h1>
         </ul>
       
-       <% if flash[:notice] %>
-        <div class="alert alert-success">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= flash[:notice] %>
-        </div>
+        <% if flash[:notice] %>
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:notice] %>
+          </div>
 
-      <% elsif flash[:error] %>
-        <div class="alert alert-danger">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= flash[:error] %>
-        </div>
+        <% elsif flash[:error] %>
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:error] %>
+          </div>
 
-      <% elsif flash[:alert] %>
-        <div class="alert alert-warning">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= flash[:alert] %>
-        </div>
-      <% end %>
+        <% elsif flash[:alert] %>
+          <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
       
-      
-      <div class="" ng-view>
-        <%= yield %>
-      </div>
+        <div class="" ng-view>
+          <%= yield %>
+        </div>
 
-      <div>
-        <a href="#top"><h6>Back to top</h6></a>
-      </div>
-      <hr>
-
-      <footer id="footer"> 
+        <footer id="footer"> 
           <%= link_to "Home", root_path %> |
           <%= link_to "TV Shows", shows_path %>|
           <%= link_to "Movies", movies_path %> |
           <%= link_to "Music", tunes_path %> |
           <%= link_to "Entertainment News", "#" %> |
           <%= link_to "About", about_path %> 
-        <br>
+          <br>
           <div id="bottom-footer">
             <em>
               Copyright &copy; 2015 FreeSpirit Development
             </em>
           </div>
-      </footer>
+          <div>
+            <a href="#top"><h6>Back to top</h6></a>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script>
