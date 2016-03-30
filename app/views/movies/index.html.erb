@@ -1,22 +1,16 @@
 <div>
-<a href="http://www.fandango.com/_movietimes?wss=link728x90"><img src="http://www.statf.com/r99.9/redesign/areas/staticpages/img/linktous/search/728x90/v1.gif" border="0" alt="Find Theater Showtimes" /></a>
-<script type="text/javascript" src="http://www.fandango.com/affiliatewidget_srchban_728x90.js?r=249_686197"></script>
+  <a href="http://www.fandango.com/_movietimes?wss=link728x90"><img src="http://www.statf.com/r99.9/redesign/areas/staticpages/img/linktous/search/728x90/v1.gif" border="0" alt="Find Theater Showtimes" /></a>
+  <script type="text/javascript" src="http://www.fandango.com/affiliatewidget_srchban_728x90.js?r=249_686197"></script>
 </div>
 <div class="search">
   <div class="col-md-12">
     <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
-    <%= text_field_tag :search, params[:search], class: "form-control" %>
-    <br>
-    <%= submit_tag "Search Movies", name: nil, class: "btn btn-info" %>
+      <%= text_field_tag :search, params[:search], class: "form-control" %>
+      <%= button_to search_movies_path, {remote: true, class: "btn btn-small"} do %>
+        <i class="fa fa-search"></i>    
+      <% end %>
     <% end %>
   </div>
-  <div>
-    <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
-    <%= text_field_tag :search, params[:search], class: "form-control" %> 
-    <div class="search">
-      <span class="fa fa-search"></span>
-  </div>
-    <% end %>
 </div>
 <br>
 

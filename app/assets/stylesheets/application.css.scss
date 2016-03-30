@@ -164,6 +164,16 @@ background:transparent !important
   margin: auto;
 }
 
+.btn-small{
+  background-color: transparent;
+  color: #5bc0de;
+}
+
+.btn-small:hover{
+  background-color: transparent;
+  color: #fff;
+}
+
 @media screen and (max-width: 667px) { 
   .container-fluid{
     display: none;
