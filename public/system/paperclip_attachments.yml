@@ -1,0 +1,19 @@
+---
+:Movie:
+  :image:
+  - :large
+  - :medium
+  - :small
+  - :thumb
+:Show:
+  :image:
+  - :large
+  - :medium
+  - :small
+  - :thumb
+:Tune:
+  :image:
+  - :large
+  - :medium
+  - :small
+  - :thumb
