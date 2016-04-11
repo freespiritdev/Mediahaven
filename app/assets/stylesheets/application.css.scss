@@ -178,6 +178,13 @@ background:transparent !important
   text-align: center;
 }
 
+.back{
+  text-transform: none;
+}
+a:hover.back{
+   text-decoration: none;
+}
+
 @media screen and (max-width: 667px) { 
   .container-fluid{
     display: none;
