@@ -7,7 +7,8 @@
     <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
       <%= text_field_tag :search, params[:search], class: "form-control" %>
       <%= button_to search_movies_path, {remote: true, class: "btn btn-small"} do %>
-        <i class="fa fa-search"></i>    
+        <span class="fa fa-search"></span>
+        <input placeholder="Search"></input>    
       <% end %>
     <% end %>
   </div>

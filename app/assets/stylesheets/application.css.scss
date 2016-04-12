@@ -108,6 +108,14 @@ background:transparent !important
 
 .search{
  text-align: center;
+ position: absolute;
+}
+.search .fa-search{
+  position: relative;
+}
+.search input{
+   background-color: #000;
+   border-color: #fff;
 }
 
 .hide {
