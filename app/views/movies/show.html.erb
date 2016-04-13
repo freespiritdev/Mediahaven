@@ -7,11 +7,13 @@
   <div class="col-md-5">
     <%= image_tag @movie.image.url(:medium) %> 
   </div>
+  <div class="col-md-3">
+  <div class="embed-container">
+    <h6>Watch the trailer</h6>
+    <%= embed(@movie.youtube_url) if @movie.youtube_url%>
+  </div></div>
 
-  <div class="trailers">
-  </div>
-
-  <div class="col-md-4 col-md-offset-1">
+  <div class="col-md-3 col-md-offset-1">
     <h1 class="review-title">Reviews</h1>
     <% if @reviews.blank? %>
       <h3>No reviews yet, go ahead and become the first to review this movie!</h3>
@@ -22,6 +24,7 @@
         </div>
       <% end %>
     <% end %>
+
   </div>
 </div>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531094509) do
+ActiveRecord::Schema.define(version: 20160413055746) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150531094509) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "slug"
+    t.string   "youtube_url"
   end
 
   add_index "movies", ["slug"], name: "index_movies_on_slug"
@@ -60,7 +61,6 @@ ActiveRecord::Schema.define(version: 20150531094509) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "tune_id"
     t.integer  "show_id"
   end
 
