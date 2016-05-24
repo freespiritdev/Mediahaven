@@ -2,6 +2,11 @@
 @import "bootstrap";
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 
+
+$lightblue: #33CCFF;
+$white:     #FFFFFF;
+$black:     #000000;
+
 *{
   margin: 0;
   padding: 0;
@@ -10,62 +15,63 @@
 
 html,
 body {
-  background: #000000;
+  background: $black;
   margin:0;
   padding:0;
   height:100%;
-  color: #FFFFFF;
+  color: $white;
 }
 
 a {
-  color: #33CCFF;
+  color: $lightblue;
 }
+
 a:hover{
-  color: #FFF;
+  color: $white;
 }
 
 a.movielink {
-  color: #FFF;
+  color: $white;
 }
 p {
-  color: #33CCFF;
+  color: $lightblue;
 }
 
 em {
-  color: #FFF;
+  color: $white;
 }
 
 span{
   font-size: 40px;
   font-weight: bold;
-  color: #33CCFF;
+  color: $lightblue;
 }
 
 h1 {
   text-align: center;
-  color: #FFF;
+  color: $white;
 }
 
 h2 {
-  color: #FFF;
+  color: $white;
 }
 
 h3 {
-  color: #33CCFF;
+  color: $lightblue;
 }
 
 h4 {
   text-align: center;
-  color: #FFF;
+  color: $white;
 }
 
 h5 {
   text-align: center;
-  color: #FFF;
+  color: $white;
 }
 
 label {
-  color: #FFF;
+  color: $white;
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
@@ -84,7 +90,7 @@ background:transparent !important
 }
 
 #form {
-  color: #33CCFF;
+  color: $lightblue;
 }
 
 #wrapper {
@@ -113,8 +119,8 @@ background:transparent !important
   position: relative;
 }
 .search input{
-   background-color: #000;
-   border-color: #fff;
+   background-color: $black;
+   border-color: $white;
 }
 
 .hide {
@@ -154,7 +160,7 @@ background:transparent !important
 }
 
 .form-control{
-  color: #33CCFF;
+  color: $lightblue;
 }
 
 .jumbotron {
@@ -182,7 +188,7 @@ background:transparent !important
 
 .btn-small:hover{
   background-color: transparent;
-  color: #fff;
+  color: $white;
 }
 
 .add{
