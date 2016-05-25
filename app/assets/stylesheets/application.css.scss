@@ -7,12 +7,12 @@ $lightblue: #33CCFF;
 $white:     #FFFFFF;
 $black:     #000000;
 
-*{
+/**{
   margin: 0;
   padding: 0;
   border: 0;
 }
-
+*/
 html,
 body {
   background: $black;
@@ -80,6 +80,7 @@ label {
 
 input {
  line-height: 2;
+
 }
 
 input[type="file"]{
@@ -115,8 +116,9 @@ background:transparent !important
 .search{
  text-align: center;
  margin: 0 auto;
- border-color: #fff;
+ border:0;
 }
+
 .search .fa-search{
   position: relative;
 }
@@ -181,6 +183,8 @@ background:transparent !important
 .carousel-inner img {
   margin: auto;
 }
+
+.btn{ border-color: $white; }
 
 .btn-small{
   background-color: transparent;
