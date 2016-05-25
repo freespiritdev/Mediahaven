@@ -1,12 +1,20 @@
 <div class="search">
   <div class="col-md-12">
     <%= form_tag search_tunes_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
-    <%= text_field_tag :search, params[:search], class: "form-control" %>
-    <br>
-    <%= submit_tag "Search Music", name: nil, class: "btn btn-info" %>
+    <%= button_to search_movies_path, {remote: true, class: "btn btn-small"} do %><span class="fa fa-search">
+        <input placeholder="Search" class="search"></input></span>
+      <% end %>
     <% end %>
   </div>
 </div>
+<div class="search">
+  <div class="col-md-12">
+    <%= form_tag search_movies_path,  method: :get, class: "search", role: "search" do %>
+      <%= button_to search_movies_path, {remote: true, class: "btn btn-small"} do %><span class="fa fa-search">
+        <input placeholder="Search" class="search"></input></span>
+      <% end %>
+    <% end %>
+  </div>
 <br>
 
 <div class="add"><%= link_to 'Add Music', new_tune_path %></div>
