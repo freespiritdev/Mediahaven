@@ -81,6 +81,7 @@ label {
 input {
  line-height: 2;
 }
+
 input[type="file"]{
   display: inline-block;
 }
@@ -113,14 +114,14 @@ background:transparent !important
 
 .search{
  text-align: center;
- position: absolute;
+ margin: 0 auto;
+ border-color: #fff;
 }
 .search .fa-search{
   position: relative;
 }
 .search input{
    background-color: $black;
-   border-color: $white;
 }
 
 .hide {
@@ -183,7 +184,7 @@ background:transparent !important
 
 .btn-small{
   background-color: transparent;
-  color: #5bc0de;
+  color: $lightblue;
 }
 
 .btn-small:hover{
