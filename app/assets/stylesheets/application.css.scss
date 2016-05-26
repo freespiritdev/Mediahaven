@@ -80,7 +80,6 @@ label {
 
 input {
  line-height: 2;
-
 }
 
 input[type="file"]{
@@ -156,8 +155,9 @@ background:transparent !important
   display: inline-block;
   margin-bottom: 10px;
   margin-top: 20px;
+  margin-left: 0;
   text-align: center;
-  padding: 5px;
+  padding: 1px;
   font-size: 12px;
   border: 0;
 }
@@ -203,6 +203,11 @@ background:transparent !important
 .back{
   text-transform: none;
 }
+
+.welcome{
+  margin: 0;
+  border: 0;
+}
 #top{
   text-align: center;
 }
@@ -212,13 +217,13 @@ a:hover.back{
 
 @media screen and (max-width: 667px) { 
   div.jumbotron{display: none;}
-  .thumbnail{ padding: 0px;}
+  .thumbnail{ padding: 0px; margin-top: 0px;}
   .back{display: none;}
-  img{ width: 60px; height: 60px;} 
+  img{ width: 100px; height: 100px;} 
+  .col-xs-8{width: 30%;}
   .col-xs-8, .col-sm-4,.col-lg-3{
     padding-right: 0px; 
     padding-left: 0px;
     float: left;
   }
-  .col-xs-8{width: 30%;}
 }
