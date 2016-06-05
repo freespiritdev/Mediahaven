@@ -32,4 +32,5 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'flexslider'
 gem 'angularjs-rails'
 gem 'angular-ui-bootstrap-rails'
+gem 'json'
 

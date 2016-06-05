@@ -211,6 +211,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  json
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-twitter
