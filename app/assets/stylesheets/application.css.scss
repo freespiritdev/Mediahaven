@@ -149,6 +149,9 @@ background:transparent !important
 .featured{
   display: flex;
    flex-basis: auto;
+   /*-webkit-animation: conveyorBelt 296 linear infinite;
+   animation: conveyorBelt 296 linear infinite;
+   width: 1036rem;*/
 }
 .thumbnail {
   background-color: inherit;
