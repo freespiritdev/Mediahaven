@@ -1,6 +1,6 @@
 <div class="search">
   <div class="col-md-12">
-     <%= form_tag search_movies_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
+    <%= form_tag search_movies_path,  method: :get, class: "search", role: "search" do %>
       <%= button_to search_movies_path, {remote: true, class: "btn btn-small"} do %><span class="fa fa-search">
         <input placeholder="Search" class="search"></input></span>
       <% end %>
